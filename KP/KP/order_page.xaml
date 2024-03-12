@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KP.order_page">
+    
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="Fon.jpg" Aspect="AspectFill" />
+            <StackLayout Padding="20">
+            
+            <Label Text="Адрес откуда:" />
+            <Entry x:Name="fromAddressEntry" Placeholder="Введите адрес отправки" />
+            <Label Text="Адрес куда:" />
+            <Entry x:Name="toAddressEntry" Placeholder="Введите адрес назначения" />
+            <Label Text="Дата:" />
+            <DatePicker x:Name="datePicker" />
+            <Label Text="Время:" />
+            <TimePicker x:Name="timePicker" />
+            <Label Text="Комментарий:" />
+            <Editor x:Name="commentEditor" HeightRequest="100" />
+            <Button x:Name="sendButton" Text="Отправить" TextColor="White" Clicked="SendButton_Clicked"  BackgroundColor="Orange" />
+        </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KP.Basket">
+    <ContentPage.Content>
+        <Grid >
+            <Image Source="Fon.jpg" Aspect="AspectFill" />
+            <ListView x:Name="autoListView" HasUnevenRows="True" BackgroundColor="Transparent">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid BackgroundColor="LightSkyBlue" Margin="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Label Text="Почта заказчика: " FontSize="16" TextColor="Yellow" Grid.Row="0" Grid.Column="0" />
+                                <Label Text="{Binding email}" FontSize="18" TextColor="White" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" />
+                                <Label Text="Дата: " FontSize="16" TextColor="Yellow" Grid.Row="1" Grid.Column="0" />
+                                <Label Text="{Binding DateString}" FontSize="18" TextColor="White" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" />
+                                <Label Text="Транспорт: " FontSize="16" TextColor="Yellow" Grid.Row="2" Grid.Column="0" />
+                                <Label Text="{Binding name_auto}" FontSize="18" TextColor="White" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" />
+                                
+                                <ImageButton Clicked="Delete_Click" Source="deletebtn.png" BackgroundColor="Transparent" WidthRequest="40" HeightRequest="40" Grid.Row="0" Grid.Column="2" Grid.RowSpan="3" Grid.ColumnSpan="1" HorizontalOptions="End" VerticalOptions="Start"/>
+                               
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

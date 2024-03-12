@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KP.Page1"
+             >
+    <Grid>
+        <Image Source="g.png" Aspect="AspectFill" />
+     
+        
+        <Frame  BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center">
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+
+                <Frame x:Name="ab" BorderColor="White" BackgroundColor="Transparent" Padding="0" CornerRadius="0" HasShadow="False" Margin="0,0, 0, 10">
+                    <Entry x:Name="entry1"  WidthRequest="200" Placeholder="Введите email" PlaceholderColor="White" HorizontalTextAlignment="Center" Completed="Login_Completed1" TextColor="White" FontSize="19" FontAttributes="Bold"/>
+                </Frame>
+                <Frame x:Name ="NameFr"  BorderColor="White" BackgroundColor="Transparent" Padding="0" CornerRadius="0" HasShadow="False" Margin="0,0, 0, 10">
+                    <Entry x:Name="entryName"  WidthRequest="200" Placeholder="Введите Имя" PlaceholderColor="White" HorizontalTextAlignment="Center" Completed="Login_Completed1" TextColor="White" FontSize="19" FontAttributes="Bold"/>
+                </Frame>
+                <Frame x:Name="ac" BorderColor="White" BackgroundColor="Transparent" Padding="0" CornerRadius="0" HasShadow="False" Margin="0,0, 0, 10">
+                    <Entry x:Name="entry2" WidthRequest="200" IsPassword="True" Placeholder="Введите пароль" PlaceholderColor="White" HorizontalTextAlignment="Center" Completed="Password_Completed2" TextColor="White" FontSize="19" FontAttributes="Bold"/>
+                </Frame>
+                <Frame x:Name="ad" BorderColor="White" BackgroundColor="Transparent" Padding="0" CornerRadius="0" HasShadow="False" Margin="0,0, 0, 20">
+                    <Entry x:Name="entry3" WidthRequest="200" IsPassword="True" Placeholder="Подтвердите пароль" PlaceholderColor="White" HorizontalTextAlignment="Center" Completed="Password_Completed3" TextColor="White" FontSize="19" FontAttributes="Bold"/>
+                </Frame >
+                <Label x:Name ="ErrorName" Text="" TextColor="red" FontSize="Body"/>
+                <Button 
+                    x:Name="ButtenRegistration"
+                    Margin="-15,0, 0, 0"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Text="Уже есть аккаунт?&#10;Войти"
+                    
+                    TextColor="LightSkyBlue"
+                    BackgroundColor="Transparent"
+                    Clicked="ButtonRegistration_Click" 
+                    />
+                <StackLayout Orientation="Horizontal" Margin="0,0, 0, 10">
+                <CheckBox x:Name="checkBox" CheckedChanged="CheckBox_CheckedChanged" Color="AliceBlue" />
+                <StackLayout Orientation="Vertical">
+                        <Label Text="Соглашаюсь на обработку" TextColor="white" FontSize="Body"/>
+                        <Label Text="персональных данных" TextColor="white" FontSize="Body"/>
+                </StackLayout>
+            </StackLayout>
+            <Button x:Name="ButtenAccount_registration" Text="Зарегистрироваться" BackgroundColor="LightSkyBlue" TextColor="White" FontAttributes="Bold" CornerRadius="40" HorizontalOptions="Center" VerticalOptions="Center" Command="{Binding SubmitCommand}" Clicked="ButtenAccount_registration_Clicked"/>
+        </StackLayout>
+
+    </Frame>
+    </Grid>
+</ContentPage>

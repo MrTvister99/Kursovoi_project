@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KP.loginPage">
+    <ContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand">
+            <Image Source="g.jpg" Aspect="AspectFill" />
+
+
+            <Frame  BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" >
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+
+                    <Frame x:Name="ab"  BorderColor="White" BackgroundColor="Transparent" Padding="0" CornerRadius="0" HasShadow="False" Margin="0,0, 0, 25" >
+                        <Entry x:Name ="entry1" WidthRequest="300" Placeholder="Введите email" PlaceholderColor="White" HorizontalTextAlignment="Center" Completed="Login_Completed1" TextColor="White" FontSize="19" FontAttributes="Bold"/>
+                    </Frame>
+                    <Frame x:Name="ac" BorderColor="White" BackgroundColor="Transparent" Padding="0" CornerRadius="0" HasShadow="False" Margin="0,0, 0, 10" >
+                        <Entry x:Name ="entry2" WidthRequest="300" IsPassword="True" Placeholder="Введите пароль" PlaceholderColor="White" HorizontalTextAlignment="Center" Completed="Password_Completed2" TextColor="White" FontSize="19" FontAttributes="Bold" />
+                    </Frame>
+                    <Frame  Padding="0" CornerRadius="0" HasShadow="False" Margin="0,0, 0, 10" BackgroundColor="Transparent">
+                        <Label x:Name="Txt" Text="" TextColor="red" FontSize="16"  FontAttributes="Bold" />
+                    </Frame>
+
+                    <Button 
+                      
+                   x:Name="ButtenRegistration"
+                   Margin="0,0,0,10"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Text="Ещё нет аккаунта?&#10;Pегистрация"
+                
+                  
+                   TextColor="LightSkyBlue"
+                   BackgroundColor="Transparent"
+                   Clicked="ButtonRegistration_Click1" />
+
+                    <Button x:Name="ButtenAccount_registration" Text="Войти" BackgroundColor="LightSkyBlue" TextColor="White" FontAttributes="Bold" CornerRadius="40" HorizontalOptions="Center" VerticalOptions="Center" Command="{Binding SubmitCommand}" Clicked="ButtenAccount_registration_Clicked" Margin="0,0,0,10" HeightRequest="70" WidthRequest="140"/>
+                </StackLayout>
+
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+    

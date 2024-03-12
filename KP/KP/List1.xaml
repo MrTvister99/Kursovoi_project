@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KP.List1">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Image Source="Fon.jpg" Aspect="AspectFill" />
+                <StackLayout Spacing="40" Padding="20" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Выберите транспорт" FontSize="24" TextColor="Black" Grid.Row="0" Grid.Column="0" />
+                        <ImageButton BackgroundColor="Transparent" Source="basket.png" Clicked="SquareButtonClicked" Grid.Row="0" Grid.Column="1" HeightRequest="80" WidthRequest="80" />
+                    </Grid>
+                    <BoxView HeightRequest="2" BackgroundColor="Blue" />
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Минивэны" FontFamily="Bold" FontSize="21" TextColor="Black" Grid.Row="0" Grid.Column="0" />
+                    <Button Clicked="bus" Text="Подробнее" Grid.Row="1" Grid.Column="1" TextColor="White" BackgroundColor="Orange"/>
+
+                    
+                        <Label Grid.Row="1" Grid.Column="0" Text="5-9 Человек" TextColor="Black" FontSize="20" FontFamily="Bold"  />
+                   
+
+                   
+                    <Image Source="mini2.png" Grid.Row="0" Grid.Column="0" />
+                </Grid>
+
+                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                        <Label Text="Маршрутки" FontFamily="Bold" FontSize="21" TextColor="Black" Grid.Row="0" Grid.Column="0" />
+                    <Button Clicked="bus1" Text="Подробнее" Grid.Row="1" Grid.Column="1" TextColor="White" BackgroundColor="Orange" />
+
+                    
+                        <Label Grid.Row="1" Grid.Column="0" Text="10-20 Человек" FontSize="20" TextColor="Black" FontFamily="Bold" />
+                    
+
+                   
+                    <Image Source="marshrutka.png" Grid.Row="0" Grid.Column="0" />
+                </Grid>
+
+                
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="Автобусы" FontFamily="Bold" FontSize="21" TextColor="Black" Grid.Row="0" Grid.Column="0" />
+                        <Button Clicked="bus2" Text="Подробнее" Grid.Row="1" Grid.Column="1" TextColor="White" BackgroundColor="Orange"/>
+
+                      
+                        <Label Grid.Row="1" Grid.Column="0" Text="21-50 Человек" FontSize="20" TextColor="Black" FontFamily="Bold" />
+
+                        <Image Source="bus.png" Grid.Row="0" Grid.Column="0" />
+                    </Grid>
+
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

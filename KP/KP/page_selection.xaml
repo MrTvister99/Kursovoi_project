@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KP.page_selection">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="Fon.jpg" Aspect="AspectFill" />
+            <StackLayout>
+                <ListView x:Name="myListView"
+                  ItemsSource="{Binding Images}"
+                  HasUnevenRows="True"
+                  CachingStrategy="RecycleElement">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="150" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Grid.RowSpan="2" Source="{Binding ImageUrl}"
+                                    WidthRequest="1" />
+
+                                    <StackLayout Grid.Column="1" Orientation="Vertical">
+                                        <Label x:Name="NameBus"  Text="{Binding Название}" FontSize="19" TextColor="Black" FontAttributes="Bold"/>
+                                        <Label x:Name="CountBus"  Text="{Binding FormatedCount}" FontSize="17"  TextColor="Black" FontAttributes="Bold" />
+                                        <Label x:Name="price" Text="{Binding FormatedPrice}" FontSize="17" TextColor="Black" FontAttributes="Bold" />
+                                    </StackLayout>
+                                    <Button Grid.Row="1" Grid.Column="1" Text="Заказать"
+                                     CommandParameter="{Binding Название}"
+                                    Clicked="Order"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="End"
+                                    TextColor="White"
+                                    BackgroundColor="Orange" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
